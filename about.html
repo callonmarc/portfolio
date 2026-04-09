@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="About Marcus Brown - web builder, creative, and future cybersecurity professional." />
+    <title>About | Marcus Brown</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="about">
+    <canvas id="particle-field" aria-hidden="true"></canvas>
+    <div class="page-glow" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <nav class="navbar container" aria-label="Primary">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">⦿</span> Marcus Brown</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="sr-only">Toggle navigation</span><span></span><span></span><span></span></button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="about.html" data-nav="about">About</a></li>
+          <li><a href="projects.html" data-nav="projects">Projects</a></li>
+          <li><a href="contact.html" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container page-main">
+      <section class="section reveal">
+        <div class="section-heading">
+          <p class="kicker">About Me</p>
+          <h1>Building at the intersection of design, code, and security.</h1>
+        </div>
+        <div class="two-column">
+          <article class="panel">
+            <h2>My Story</h2>
+            <p>
+              I’m Marcus Brown, a creator focused on building high-impact digital experiences. I love turning ideas
+              into polished interfaces that look sharp, move smoothly, and communicate clearly.
+            </p>
+            <p>
+              My path combines web development, visual design, and cybersecurity ambition. I’m driven by precision,
+              curiosity, and the goal of building systems that are both powerful and trustworthy.
+            </p>
+          </article>
+          <article class="panel">
+            <h2>Direction</h2>
+            <p>
+              I’m growing as a front-end builder while expanding deep cybersecurity skills through structured projects,
+              labs, and practical learning.
+            </p>
+            <ul class="bullet-list">
+              <li>Web development with premium interface quality</li>
+              <li>Creative direction and visual storytelling</li>
+              <li>Cybersecurity fundamentals + lab-based practice</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-heading">
+          <p class="kicker">What I’m Building</p>
+          <h2>Current Focus Areas</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card interactive-card">
+            <h3>Portfolio Ecosystem</h3>
+            <p>A growing collection of projects that combine brand-level design and clean engineering.</p>
+          </article>
+          <article class="card interactive-card">
+            <h3>Cyber Lab Routines</h3>
+            <p>Personal security environments for testing workflows, documenting findings, and hardening systems.</p>
+          </article>
+          <article class="card interactive-card">
+            <h3>Creative + Technical Identity</h3>
+            <p>A personal brand centered around elite execution, originality, and future-ready problem solving.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-heading">
+          <p class="kicker">Skills & Tools</p>
+          <h2>Stack Overview</h2>
+        </div>
+        <div class="skill-grid">
+          <div class="panel"><h3>Languages</h3><p>HTML5, CSS3, JavaScript (Vanilla).</p></div>
+          <div class="panel"><h3>Design</h3><p>Figma workflows, UI systems, interaction polish.</p></div>
+          <div class="panel"><h3>Workflow</h3><p>Git/GitHub, modular file organization, iterative shipping.</p></div>
+          <div class="panel"><h3>Cybersecurity</h3><p>Security concepts, threat awareness, lab simulation practice.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Marcus Brown. All rights reserved.</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
