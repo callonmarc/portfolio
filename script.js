@@ -80,7 +80,7 @@ if (canvas) {
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(182,255,47,0.72)';
+      ctx.fillStyle = 'rgba(214, 224, 240, 0.58)';
       ctx.fill();
 
       for (let j = i + 1; j < particles.length; j += 1) {
@@ -90,7 +90,9 @@ if (canvas) {
         const distance = Math.hypot(dx, dy);
         if (distance < 115) {
           const alpha = 1 - distance / 115;
-          ctx.strokeStyle = `rgba(65,255,210,${alpha * 0.16})`;
+          ctx.strokeStyle = `rgba(176, 26, 46, ${alpha * 0.2})`;
+          ctx.shadowBlur = 12;
+          ctx.shadowColor = 'rgba(176, 26, 46, 0.45)';
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
