@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Projects by Marcus Brown." />
+    <title>Projects | Marcus Brown</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="projects">
+    <canvas id="particle-field" aria-hidden="true"></canvas>
+    <div class="page-glow" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <nav class="navbar container" aria-label="Primary">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">⦿</span> Marcus Brown</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="sr-only">Toggle navigation</span><span></span><span></span><span></span></button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="about.html" data-nav="about">About</a></li>
+          <li><a href="projects.html" data-nav="projects">Projects</a></li>
+          <li><a href="contact.html" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container page-main">
+      <section class="section reveal">
+        <div class="section-heading">
+          <p class="kicker">Project Archive</p>
+          <h1>Built Systems + Next Missions</h1>
+        </div>
+        <div class="card-grid projects-grid">
+          <article class="card interactive-card">
+            <p class="chip">Website / Brand</p>
+            <h2>Division 1 Website</h2>
+            <p>Dynamic website experience designed for sharp brand presence and high-engagement storytelling.</p>
+            <p class="meta">Tech: HTML, CSS, JavaScript</p>
+            <a class="btn btn-secondary" href="#">Open Case Study</a>
+          </article>
+          <article class="card interactive-card">
+            <p class="chip">Creative Platform</p>
+            <h2>Bonjour Blowup Website</h2>
+            <p>Modern visual-forward site with polished UX decisions, pacing, and strong interactive detail.</p>
+            <p class="meta">Tech: HTML, CSS, JavaScript</p>
+            <a class="btn btn-secondary" href="#">Open Case Study</a>
+          </article>
+          <article class="card interactive-card">
+            <p class="chip">Cybersecurity</p>
+            <h2>Cybersecurity Lab</h2>
+            <p>Ongoing security lab focused on reconnaissance basics, hardening routines, and vulnerability awareness.</p>
+            <p class="meta">Tech: Linux, CLI, Networking Fundamentals</p>
+            <a class="btn btn-secondary" href="#">Preview Lab Notes</a>
+          </article>
+          <article class="card interactive-card">
+            <p class="chip">Future Build</p>
+            <h2>Secure Portfolio API (Placeholder)</h2>
+            <p>Planned backend-connected portfolio extension with authentication, logs, and secure deployment workflow.</p>
+            <p class="meta">Tech: Planned Stack</p>
+            <a class="btn btn-secondary" href="#">Coming Soon</a>
+          </article>
+          <article class="card interactive-card">
+            <p class="chip">Future Build</p>
+            <h2>Interactive Threat Dashboard (Placeholder)</h2>
+            <p>Concept dashboard for visualizing threat models, incidents, and response simulation states.</p>
+            <p class="meta">Tech: Planned Stack</p>
+            <a class="btn btn-secondary" href="#">Coming Soon</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Marcus Brown. All rights reserved.</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
