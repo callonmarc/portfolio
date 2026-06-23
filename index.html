@@ -1,1 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CallOnMarc portfolio: web development, cybersecurity, and music in an original survival-horror-inspired interactive experience."
+    />
+    <title>CallOnMarc // Case Terminal</title>
+    <link rel="preload" href="assets/images/bg-main.png" as="image" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader" aria-live="polite">
+      <div class="loader__box">
+        <p>CALLONMARC FIELD TERMINAL</p>
+        <div class="loader__bar"><span></span></div>
+        <small>calibrating cathode ray display...</small>
+      </div>
+    </div>
 
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="background" aria-hidden="true"></div>
+    <div class="fog fog--one" aria-hidden="true"></div>
+    <div class="fog fog--two" aria-hidden="true"></div>
+    <div class="overlay overlay--scanlines" aria-hidden="true"></div>
+    <div class="overlay overlay--grain" aria-hidden="true"></div>
+    <div
+      id="staticOverlay"
+      class="overlay overlay--static"
+      aria-hidden="true"
+    ></div>
+
+    <audio
+      id="ambientAudio"
+      src="assets/audio/ambient.mp3"
+      loop
+      preload="auto"
+    ></audio>
+    <audio
+      id="moveAudio"
+      src="assets/audio/menu-move.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="selectAudio"
+      src="assets/audio/menu-select.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="glitchAudio"
+      src="assets/audio/glitch.mp3"
+      preload="auto"
+    ></audio>
+
+    <main class="terminal-shell">
+      <section
+        id="home"
+        class="screen screen--home active"
+        data-screen="home"
+        aria-labelledby="site-title"
+      >
+        <div class="title-block">
+          <p class="kicker">Recovered Interface / 1999</p>
+          <h1 id="site-title">CallOnMarc</h1>
+          <p class="subtitle">Developer. Cybersecurity Enthusiast. Musician.</p>
+        </div>
+
+        <nav class="main-menu" aria-label="Portfolio sections">
+          <button class="menu-item selected" data-target="investigate">
+            <span></span>INVESTIGATE FILE
+          </button>
+          <button class="menu-item" data-target="projects">
+            <span></span>PROJECT ARCHIVE
+          </button>
+          <button class="menu-item" data-target="cyber">
+            <span></span>CYBERSECURITY LABS
+          </button>
+          <button class="menu-item" data-target="recordings">
+            <span></span>RECORDINGS
+          </button>
+          <button class="menu-item" data-target="personnel">
+            <span></span>PERSONNEL FILE
+          </button>
+          <button class="menu-item" data-target="contact">
+            <span></span>TRANSMIT MESSAGE
+          </button>
+        </nav>
+        <p class="hint">
+          ↑ ↓ select file &nbsp; / &nbsp; ENTER open &nbsp; / &nbsp; ESC return
+        </p>
+      </section>
+
+      <section
+        id="investigate"
+        class="screen dossier"
+        data-screen="investigate"
+        aria-labelledby="investigate-title"
+      >
+        <button class="back-button" data-back>← RETURN TO MENU</button>
+        <div class="document document--case">
+          <p class="stamp">STATUS: ACTIVE</p>
+          <h2 id="investigate-title">CASE FILE: CALLONMARC</h2>
+          <div class="type-line">
+            Subject is currently building across the web, defensive security,
+            and sound.
+          </div>
+          <p>
+            I create focused web experiences that balance atmosphere with
+            usability: responsive layouts, accessible interactions, and
+            front-end systems that feel intentional instead of generic.
+          </p>
+          <p>
+            My cybersecurity path is centered on practical lab work, Active
+            Directory fundamentals, attack-path awareness, and steady
+            documentation of what I learn.
+          </p>
+          <p>
+            Music production keeps the creative side sharp. Sound design,
+            recording, and release planning influence the mood, pacing, and
+            polish I bring to technical projects.
+          </p>
+          <p>
+            Current objective: continue studying, ship professional projects,
+            deepen security knowledge, and build work that recruiters remember
+            after the screen goes dark.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="projects"
+        class="screen dossier"
+        data-screen="projects"
+        aria-labelledby="projects-title"
+      >
+        <button class="back-button" data-back>← RETURN TO MENU</button>
+        <article class="document evidence-grid">
+          <div>
+            <p class="stamp">ARCHIVED EVIDENCE</p>
+            <h2 id="projects-title">PROJECT ARCHIVE</h2>
+            <h3>Division 1 Website Project</h3>
+            <p>
+              A recovered web build focused on presenting a Division 1 identity
+              with clean structure, direct messaging, and a polished visual
+              experience.
+            </p>
+            <h4>Technologies Used</h4>
+            <ul class="red-list">
+              <li>HTML5 semantic structure</li>
+              <li>Responsive CSS layouts</li>
+              <li>JavaScript interaction patterns</li>
+              <li>GitHub Pages-ready static deployment</li>
+            </ul>
+            <h4>External Links</h4>
+            <div class="link-row">
+              <a href="#" aria-label="Division 1 live site link pending"
+                >Live Site Pending</a
+              ><a href="#" aria-label="Division 1 repository link pending"
+                >Repository Pending</a
+              >
+            </div>
+          </div>
+          <figure class="evidence-card">
+            <img
+              src="assets/images/project-div1.png"
+              alt="Screenshot of Division 1 website project"
+            />
+            <figcaption>Recovered screenshot: DIV1-WEB-001</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section
+        id="cyber"
+        class="screen dossier"
+        data-screen="cyber"
+        aria-labelledby="cyber-title"
+      >
+        <button class="back-button" data-back>← RETURN TO MENU</button>
+        <article class="document evidence-grid">
+          <div>
+            <p class="stamp">CLASSIFIED / TRAINING</p>
+            <h2 id="cyber-title">CYBERSECURITY LABS</h2>
+            <div class="classified">
+              <h3>Active Directory Lab</h3>
+              <p>
+                Hands-on Windows domain practice covering users, groups,
+                policies, enumeration, and defensive thinking.
+              </p>
+            </div>
+            <div class="classified">
+              <h3>GOAD Lab</h3>
+              <p>
+                A deliberate vulnerable-domain environment for learning
+                privilege escalation paths and detection-minded analysis.
+              </p>
+            </div>
+            <div class="classified">
+              <h3>TryHackMe Progress</h3>
+              <p>
+                Room-by-room development of fundamentals, methodology,
+                note-taking, and repeatable troubleshooting habits.
+              </p>
+            </div>
+            <div class="classified">
+              <h3>Learning Journey</h3>
+              <p>
+                Building toward security roles by combining web knowledge, lab
+                discipline, and clear communication.
+              </p>
+            </div>
+          </div>
+          <figure class="evidence-card">
+            <img
+              src="assets/images/project-cyber.png"
+              alt="Cybersecurity lab project screenshot"
+            />
+            <figcaption>Lab image: CYBER-OBS-772</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section
+        id="recordings"
+        class="screen dossier"
+        data-screen="recordings"
+        aria-labelledby="recordings-title"
+      >
+        <button class="back-button" data-back>← RETURN TO MENU</button>
+        <article class="document evidence-grid">
+          <div>
+            <p class="stamp">RECOVERED AUDIO</p>
+            <h2 id="recordings-title">RECORDINGS</h2>
+            <h3>Music Projects</h3>
+            <p>
+              Original recordings, production experiments, and sound-driven
+              creative work built with the same attention to atmosphere found
+              throughout this site.
+            </p>
+            <h3>Artist Identity</h3>
+            <p>
+              A moody, cinematic voice shaped by texture, rhythm, and
+              storytelling.
+            </p>
+            <h3>Creative Work</h3>
+            <p>
+              Writing, arranging, mixing concepts, and visual presentation for
+              future releases.
+            </p>
+            <h3>Future Releases</h3>
+            <p>
+              New material is being developed and cataloged for release when the
+              signal is stable.
+            </p>
+          </div>
+          <figure class="evidence-card">
+            <img
+              src="assets/images/project-music.jpg"
+              alt="Music artwork for CallOnMarc recordings"
+            />
+            <figcaption>Audio archive sleeve: REC-009</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section
+        id="personnel"
+        class="screen dossier"
+        data-screen="personnel"
+        aria-labelledby="personnel-title"
+      >
+        <button class="back-button" data-back>← RETURN TO MENU</button>
+        <article class="document personnel-grid">
+          <figure class="portrait">
+            <img src="assets/images/profile.jpg" alt="Portrait of Marc" />
+            <figcaption>IDENTITY CONFIRMED</figcaption>
+          </figure>
+          <div>
+            <p class="stamp">GOVERNMENT FILE / REDACTED</p>
+            <h2 id="personnel-title">PERSONNEL FILE</h2>
+            <div class="file-columns">
+              <section>
+                <h3>About Me</h3>
+                <p>
+                  Developer, cybersecurity learner, and musician turning
+                  technical curiosity into finished work.
+                </p>
+              </section>
+              <section>
+                <h3>Skills</h3>
+                <p>
+                  HTML, CSS, JavaScript, responsive UI, lab documentation,
+                  troubleshooting, creative direction.
+                </p>
+              </section>
+              <section>
+                <h3>Interests</h3>
+                <p>
+                  Web experiences, security labs, Active Directory, music
+                  production, cinematic design, and systems that tell a story.
+                </p>
+              </section>
+              <section>
+                <h3>Career Goals</h3>
+                <p>
+                  Grow into a security-aware developer and cybersecurity
+                  professional who communicates clearly and ships reliably.
+                </p>
+              </section>
+              <section>
+                <h3>Education</h3>
+                <p>
+                  Currently studying and building practical experience through
+                  projects, labs, and continuous self-directed learning.
+                </p>
+              </section>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section
+        id="contact"
+        class="screen dossier"
+        data-screen="contact"
+        aria-labelledby="contact-title"
+      >
+        <button class="back-button" data-back>← RETURN TO MENU</button>
+        <article class="document terminal-contact">
+          <p class="stamp">COMMUNICATION TERMINAL</p>
+          <h2 id="contact-title">TRANSMIT MESSAGE</h2>
+          <div class="contact-lines">
+            <a href="mailto:callonmarc@example.com"
+              >EMAIL: callonmarc@example.com</a
+            ><a href="https://github.com/CallOnMarc"
+              >GITHUB: github.com/CallOnMarc</a
+            ><a href="https://www.linkedin.com/"
+              >LINKEDIN: establish secure connection</a
+            >
+          </div>
+          <form class="contact-form">
+            <label
+              >NAME<input type="text" placeholder="enter caller id" /></label
+            ><label
+              >MESSAGE<textarea
+                rows="5"
+                placeholder="type transmission..."
+              ></textarea></label
+            ><button type="button">QUEUE TRANSMISSION</button>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <footer>"Don't Forget To CallOnMarc"</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
